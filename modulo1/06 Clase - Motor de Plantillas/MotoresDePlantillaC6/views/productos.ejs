@@ -1,0 +1,15 @@
+<%- include('./partials/header') %>
+<div class="container">
+    <h1><%= title %></h1>
+    <p><%= message %></p>
+   <ul>
+    <% for (let i = 0; i < products.length; i++) {%>
+    <li><%= products[i].name %> -
+    (vence el  <%= products[i].fecha %>) </li>
+    <% } %>
+   </ul>
+<a href="/" class="button"> Volver a HOME </a>
+</div>
+
+<%- include('./partials/footer') %>
+
