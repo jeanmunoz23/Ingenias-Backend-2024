@@ -3,6 +3,8 @@ const productos = [{id: 1, nombre: 'Notebook 14" FHD', importe: 115000, categori
                    {id: 3, nombre: 'Macbook Air 13', importe: 745000, categoria: 'Portátil'},
                    {id: 4, nombre: 'Tablet DROID 10.1"', importe: 165000, categoria:'Tablet'},
                    {id: 5, nombre: 'Smartwatch 1.8" black', importe: 22500, categoria: 'Relojes'},
-                   {id: 6, nombre: 'Smartwatch 2" red', importe: 24200, categoria: 'Relojes'}];
+                   {id: 6, nombre: 'Smartwatch 2" red', importe: 24200, categoria: 'Relojes'},
+                   {id: 5, nombre: 'TV black', importe: 1122500, categoria: 'Tablet'},
+                ];
 
 module.exports= productos;

@@ -1,0 +1,9 @@
+const productos = require('./productos');
+
+// ////////////////////////////////////////////////////////////////
+// // some 
+// ////////////////////////////////////////////////////////////////
+
+const existe = productos.some(p => p.nombre.toLowerCase().includes('tv'))
+console.log('existe algo que incluya la palabra --> tv',existe)
+
