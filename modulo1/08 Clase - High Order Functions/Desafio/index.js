@@ -23,6 +23,17 @@ app.get('/productos/id/:id', (req, res) => {
     }
 });
 
+// Ruta para obtener productos por nombre (completo o parcial)
+app.get('/productos/nombre/:nombre', (req, res) => {
+    const nombre = req.params.nombre.toLowerCase();
+    const resultados = productos.filter(p => p.nombre.toLowerCase().includes(nombre));
+    if (resultados.length > 0) {
+        res.json(resultados);
+    } else {
+        res.status(404).json({ error: 'No se encontraron productos con ese nombre' });
+    }
+});
+
 app.get('*', (req, res) => {
     res.status(403).send("Lo siento no es una ruta de mi proyecto! Ruta con get * ")
 })
