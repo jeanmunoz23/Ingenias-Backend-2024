@@ -8,12 +8,12 @@ function getAllProductos() {
         { id: 'Error', descripcion: 'No se encontraron coincidencias.' }
 }
 
-app.get('/productos', (req, res) => { 
+app.get('/api/productos', (req, res) => { 
     res.json(getAllProductos());
 })
 
 // Ruta para obtener un producto por ID
-app.get('/productos/id/:id', (req, res) => {
+app.get('/api/productos/id/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const producto = productos.find(p => p.id === id);
     if (producto) {
@@ -24,7 +24,7 @@ app.get('/productos/id/:id', (req, res) => {
 });
 
 // Ruta para obtener productos por nombre (completo o parcial)
-app.get('/productos/nombre/:nombre', (req, res) => {
+app.get('/api/productos/nombre/:nombre', (req, res) => {
     const nombre = req.params.nombre.toLowerCase();
     const resultados = productos.filter(p => p.nombre.toLowerCase().includes(nombre));
     if (resultados.length > 0) {

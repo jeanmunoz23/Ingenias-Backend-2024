@@ -25,3 +25,8 @@ const texto = buffer.toString("utf-8"); // Convertir el buffer de nuevo a texto 
 Elegir la codificación correcta es esencial para asegurarte de que los datos se almacenan y se presentan correctamente, especialmente cuando trabajas con sistemas que usan diferentes conjuntos de caracteres o idiomas.
 
 Mas info : https://medium.com/@diego.coder/buffers-y-streams-en-node-js-bd96a55420ea
+
+
+Links 
+https://www.npmjs.com/package/multer 
+https://www.npmjs.com/package/busboy 
