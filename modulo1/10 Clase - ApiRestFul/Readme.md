@@ -145,3 +145,11 @@ El cuerpo de la respuesta contiene la representación del recurso. El servidor s
 
 ## Encabezados
 La respuesta también contiene encabezados o metadatos acerca de la respuesta. Estos brindan más contexto sobre la respuesta e incluyen información como el servidor, la codificación, la fecha y el tipo de contenido.
+
+
+![alt text](image.png)
+
+https://restfulapi.net/idempotent-rest-apis/ 
+
+CRUD - create(Post), read(Get), update(put, patch), delete
+ABM - Alta(post), Baja(delete), Modificacion(put)
