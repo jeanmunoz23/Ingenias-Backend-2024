@@ -66,9 +66,9 @@ app.put('/:id', (req,res)=>{
         res.status(404).json({error: `Error en el índice`,
     descripcion: `No se pudo encontrar un producto con el valor indicado como índice: ${id}`})
     }
-    //actualizarFruta(id,fruta);
 })
-// metodo delete
+
+// metodo delete falta corregir
 app.delete('/:id', (req,res)=>{
     const id = parseInt(req.params.id);
     DB.splice(id - 1, 1);
