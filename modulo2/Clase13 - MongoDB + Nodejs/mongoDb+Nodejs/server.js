@@ -43,31 +43,31 @@ app.get('/frutas/:id', async (req, res) => {
 
 app.get('/frutas/nombre/:nombre', async (req, res) => {
     const nombreFruta = req.params.nombre
-    const client = await connectToMongodb();
+    const client = await connectToMongoDB();
     if (!client) {
         res.status(500).send('Error al conectarse a MongoDB')
         return;
     }
     const regex = new RegExp(nombreFruta.toLowerCase(), 'i');
-    const db = client.db('frutas')
-    const frutas = await db.collection('frutas').find({ nombre: regex}).toArray()
-    await disconnectToMongodb()
+    console.log(regex)
+    const db = client.db('productos')
+    const frutas = await db.collection('frutas').find({ nombre: regex }).toArray()
+    await disconnectToMongoDB()
     frutas.length == 0 ? res.status(404).send('No encontre la fruta con el nombre '+ nombreFruta): res.json(frutas)
 })
 
 app.get('/frutas/precio/:precio', async (req, res) => {
     const precioFruta = parseInt(req.params.precio) || 0
-    const client = await connectToMongodb();
+    const client = await connectToMongoDB();
     if (!client) {
         res.status(500).send('Error al conectarse a MongoDB')
         return;
     }
-    const db = client.db('frutas') 
+    const db = client.db('productos') 
     // gte: mayor o igual a
     const frutas = await db.collection('frutas').find({ importe: { $gte: precioFruta } }).toArray()
-    await disconnectToMongodb()
+    await disconnectToMongoDB()
     frutas.length == 0 ? res.status(404).send('No encontre la fruta con el precio '+ precioFruta): res.json(frutas)
-
 })
 
 app.get("*", (req, res) => {
