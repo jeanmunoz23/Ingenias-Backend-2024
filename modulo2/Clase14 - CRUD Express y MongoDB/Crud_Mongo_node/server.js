@@ -21,6 +21,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
     res.status(200).end("Bienvenido a mi API de frutas!" );
 });
+
 // GET
 app.get('/frutas', async (req, res) => {
     const client = await connectToMongoDB();
@@ -33,6 +34,7 @@ app.get('/frutas', async (req, res) => {
     await disconnectToMongoDB()
     res.status(200).json(frutas);
 });
+
 app.get('/frutas/:id', async (req, res) => {
     const frutaID = parseInt(req.params.id) || 0
 
@@ -47,6 +49,7 @@ app.get('/frutas/:id', async (req, res) => {
     await disconnectToMongoDB()
     !fruta ? res.status(404).send('No encontre la fruta con el id '+ frutaID): res.status(200).json(fruta)
 });
+
 app.get('/frutas/nombre/:nombre', async (req, res) => {
     const nombreFruta = req.params.nombre
     const client = await connectToMongoDB();
@@ -61,6 +64,7 @@ app.get('/frutas/nombre/:nombre', async (req, res) => {
     await disconnectToMongoDB()
     frutas.length == 0 ? res.status(404).send('No encontre la fruta con el nombre '+ nombreFruta): res.json(frutas)
 })
+
 app.get('/frutas/precio/:precio', async (req, res) => {
     const precioFruta = parseInt(req.params.precio) || 0
     const client = await connectToMongoDB();
@@ -126,6 +130,7 @@ app.put('/frutas/:id',async (req, res) => {
         res.status(500).send('Error al actualizar')
     }).finally(async () => { await disconnectToMongoDB() })
 })
+
 // Delete
 app.delete('/frutas/:id',async (req, res) => {
     const id = req.params.id
