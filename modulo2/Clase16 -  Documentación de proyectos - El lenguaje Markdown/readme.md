@@ -28,13 +28,15 @@ markdown es **fácil**, ~~aburrido~~ y *divertido*
 ## Links 
 https://campus.educalabs.org/
 
-[Link del campus](https://campus.educalabs.org/)
-
+[Link del campus](https://campus.educalabs.org/
 <https://stackedit.io/>
 
 [JSCONFIG VSCODE](https://code.visualstudio.com/docs/nodejs/working-with-javascript#_type-checking-javascript
 )
 
+[Link regex 1](https://indexingdata.com/blog/analitica-web/guia-basica-expresiones-regulares/#:~:text=Una%20expresi%C3%B3n%20regular%20o%20RegEx%20es%20una%20secuencia,nos%20ayudan%20a%20simplificar%20expresiones%20para%20lograr%20resultados)
+
+[Link regex 2](https://eudriscabrera.com/blog/2022/regex-101.html)
 
 ## Listas
 **lista con viñetas**

@@ -87,7 +87,7 @@ opcion 1
 
 opcion 2 
 ```
-frutas.forEach(fruta => console.log(fruta));
+    frutas.forEach(fruta => console.log(fruta));
 ```
 
 ```javascript
@@ -100,6 +100,9 @@ frutas.forEach(fruta => console.log(fruta));
 }
 // es un ejemplo de la estructura del json frutas
 ```
+opcion 3 cita
+
+> frutas.forEach(fruta => console.log(fruta));
 
 [Tecnologia](https://github.com/mariaelisaaraya/ingenias-Backend/blob/clase16/modulo2/clase16/contenido.md#technologies)
 
