@@ -77,26 +77,26 @@ app.get('/frutas/precio/:precio', async (req, res) => {
 
 // Metodo de creacion
 app.post('/frutas', async (req, res) => { 
-    const newFruit = await crearnuevaFruta(req.body)
-    !newFruit ? res.status(400).send('Error en el formato de los datos de la fruta') :
-    res.status(201).send(newFruit)
-    // const nuevaFruta = req.body
-    // if (nuevaFruta === undefined) {
-    //     res.status(400).send('Error en el formato de los datos de la fruta')
-    // }
-    // const client = await connectToMongodb();
-    // if (!client) {
-    //     res.status(500).send('Error al conectarse a MongoDB')
-    //     return;
-    // }
-    // const db = client.db('frutas') 
-    // const collection = await db.collection('frutas').insertOne(nuevaFruta)
-    //     .then(() => {
-    //         console.log('Nueva fruta creada')
-    //         res.status(201).send(nuevaFruta)
-    //     }).catch(err => { 
-    //         console.error(err)
-    //     }).finally(() => { client.close()})
+    // const newFruit = await crearnuevaFruta(req.body)
+    // !newFruit ? res.status(400).send('Error en el formato de los datos de la fruta') :
+    // res.status(201).send(newFruit)
+    const nuevaFruta = req.body
+    if (nuevaFruta === undefined) {
+        res.status(400).send('Error en el formato de los datos de la fruta')
+    }
+    const client = await connectToMongodb();
+    if (!client) {
+        res.status(500).send('Error al conectarse a MongoDB')
+        return;
+    }
+    const db = client.db('frutas') 
+    const collection = await db.collection('frutas').insertOne(nuevaFruta)
+        .then(() => {
+            console.log('Nueva fruta creada')
+            res.status(201).send(nuevaFruta)
+        }).catch(err => { 
+            console.error(err)
+        }).finally(() => { client.close()})
 })
 
 // Metodo de actualizacion
