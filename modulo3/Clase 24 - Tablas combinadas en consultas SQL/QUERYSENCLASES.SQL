@@ -20,3 +20,9 @@ SELECT FirstName, LastName, count(1) AS TOTAL_ORDENS
 FROM northwind.orders T1
 join northwind.employees T2 on T1.EmployeeID = T2.EmployeeID
 group by FirstName, LastName, T1.EmployeeID;
+
+-- CON WHERE POR FECHA
+select T1.OrderID, T2.CustomerID, T2.CompanyName, T2.ContactName, DATE(T1.ShippedDate) AS "FECHA DE LA ORDEN"
+from northwind.orders AS T1
+join northwind.customers T2 on T1.CustomerID = T2.CustomerID
+WHERE DATE(T1.ShippedDate) =  '1996-12-16';
