@@ -37,8 +37,8 @@ db.contacts.belongsToMany(db.books, {
 
 // Define initial data creo nuevos datos
 const libros = [
-    { author: "Author", title: "user" },
-    { author: "Author", title: "moderator" },
+    { author: "Author 1", title: "user" },
+    { author: "Author 2", title: "moderator" },
     { author: "Author 3", title: "admin" }
 ];
 
