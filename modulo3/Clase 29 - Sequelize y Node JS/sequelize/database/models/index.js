@@ -44,7 +44,7 @@ const libros = [
 
 const Book = db.books;
 const Contact = db.contacts;
-
+ // ----- si ya tienen los datos ignored linea 48-79
 function initial() {
     // // Insert initial book data
     // Book.create({ title: "Book 1", author: "Author 1", published: true, release_date: new Date(), subject: 1 });
@@ -79,7 +79,7 @@ function initial() {
 
 // Sync database and call initial function
 sequelize.sync().then(() => {
-    initial();
+    initial(); // ----- si ya tienen los datos ignored esta funcion
 }).catch(err => {
     console.error("Error syncing database:", err);
 });
