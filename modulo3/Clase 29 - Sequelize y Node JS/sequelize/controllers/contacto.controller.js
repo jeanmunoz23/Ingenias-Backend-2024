@@ -1,5 +1,5 @@
 const db = require("../database/models");
-const Contacto = db.contactos;
+const Contacto = db.contacts;
 const Op = db.Op;
 
 // Create and Save a new Contacto
@@ -33,8 +33,8 @@ exports.create = (req, res) => {
 
 // Retrieve all Contactos from the database.
 exports.findAll = (req, res) => {
-  const title = req.query.title;
-  var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
+  const id = req.query.id;
+  var condition = id ? { id: { [Op.like]: `%${id}%` } } : null;
 
   Contacto.findAll({ where: condition })
     .then(data => {

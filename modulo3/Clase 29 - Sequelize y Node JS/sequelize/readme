@@ -3,3 +3,8 @@
 > npm install
 > npm start 
 
+- En el config vamos a leer los datos de las env.
+- En models van los modelos de datos de cada tabla (un modelo por tabla).
+- En controllers van las funciones de los endpoints es decir lo que tenemos que hacer de logica a la base de datos ej crear uno nuevo, buscar, actualizar funciones de CRUD
+- En routes van definidas las rutas de acceso
+- Luego en el server se inciaria el servidor y lo que necesite para el mismo
