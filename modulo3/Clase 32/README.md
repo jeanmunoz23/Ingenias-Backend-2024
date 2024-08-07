@@ -2,6 +2,7 @@
 ## 1) Hacerte una cuenta en RAILWAY
 https://railway.app/ 
 
+
 ![Alt text](img/image.png)
 
 ## 2) Tener el proyecto en un repositorio
